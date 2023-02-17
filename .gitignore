@@ -10,4 +10,4 @@ yarn-error.log*
 .pnpm-debug.log*
 .env*.local
 services/dist/*
-services/config/index.js
+services/src/config/*
