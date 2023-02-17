@@ -1,0 +1,39 @@
+{
+  "name": "easy-mock",
+  "version": "0.0.1",
+  "description": "easy mock services",
+  "main": "index.js",
+  "author": "liurx <13131451002@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/index.js",
+    "start": "pm2 start pm2.config.js --env production",
+    "build": "if [ -d ./dist ]; then rm -rf dist; fi && babel src -d dist"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@koa/cors": "^4.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-ratelimit": "^5.0.1",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.7.2",
+    "nodemailer": "^6.8.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "cross-env": "^7.0.3",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.20",
+    "pm2": "^5.2.2"
+  }
+}
