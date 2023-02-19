@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "craco start",
-    "build": "craco build"
+    "build": "craco build",
+    "lint": "eslint . --fix"
   },
   "browserslist": {
     "production": [

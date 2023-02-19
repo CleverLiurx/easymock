@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import ImgClose from '../../../../assets/image/close.svg';
 import API from '../../../../api';
 import tips from '../../../../lib/tips';
@@ -13,14 +13,14 @@ export default function DataEditor({
 }) {
   const [resourceData, setResourceData] = useState('');
 
-  const getData = async () => {
+  const getData = useCallback(async () => {
     const {data} = await API.fetchResourceData({_id, projectId});
     setResourceData(JSON.stringify(data, null, 2));
-  };
+  }, [_id, projectId]);
 
   useEffect(() => {
     _id && getData();
-  }, [_id]);
+  }, [_id, getData]);
 
   const onClickUpdate = () => {
     // 验证resourceData

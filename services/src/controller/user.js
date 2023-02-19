@@ -94,7 +94,7 @@ export default class UserCtl {
       password,
     } = await new UserLoginValidator().v(ctx);
 
-    await sendMail('13131451002@163.com', '123456');
+    // await sendMail('13131451002@163.com', '123456');
 
     const user = await User.findOne({email});
 

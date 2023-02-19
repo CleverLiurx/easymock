@@ -65,7 +65,7 @@ export default function Resources() {
 
   useEffect(() => {
     getResources();
-  }, []);
+  }, [getResources]);
 
   return (
     <div className='page-resources'>

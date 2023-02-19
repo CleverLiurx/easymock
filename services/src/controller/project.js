@@ -1,4 +1,3 @@
-// import {Op} from 'sequelize';
 import {Project} from '../modal';
 import {createRes} from '../lib';
 import {
